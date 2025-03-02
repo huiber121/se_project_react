@@ -34,5 +34,5 @@ Front End: RestAPI
 ## Deployment
 
 This website is deployed to the github
-Github page Link: https://huiber121.github.io/se_project_spots/
-Video Intro: https://drive.google.com/file/d/1uAl5dhT46CKzRXs5-rJYs9uIFukChT70/view?usp=sharing
+Github page Link: Not Yet Available
+Video Intro: Not Yet Available
