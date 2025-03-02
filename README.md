@@ -30,9 +30,10 @@ This is a website to upload and filter clothing by specific weather type
 Porject Setup: Vite
 Programming language used: React.js , JS, HTML, CSS
 Front End: RestAPI
+Hosting Platform: Github
 
 ## Deployment
 
 This website is deployed to the github
-Github page Link: Not Yet Available
+[Github page Link](https://huiber121.github.io/se_project_react/)
 Video Intro: Not Yet Available
