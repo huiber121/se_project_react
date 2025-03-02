@@ -1,3 +1,14 @@
-.app{
-  
+.page{
+  background-color: rgba(243, 243, 243, 1);
+  font-family: Cabinet Grotesk;
+  font-weight: 700;
+}
+
+/* set the restriction on page size */
+.page__content {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px 24px 20px;
+  min-height: 100vh;
+  height: 100%;
 }
