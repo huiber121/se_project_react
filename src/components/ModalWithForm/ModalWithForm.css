@@ -13,18 +13,18 @@
     transition: visibility 0s linear 0.5s, opacity 0.5s linear;
 }
 
-.modal__opened {
+.modal_opened {
     visibility: visible;
     opacity: 1;
     transition-delay: 0.2s;
 }
 
 .modal__title {
-    margin: 0;
+    margin: 0 0 24px 0;
     font-size: 16px;
 }
 
-.modal__close {
+.modal_close {
     position: absolute;
     top: 20px;
     right: 28px;
@@ -34,7 +34,7 @@
     cursor: pointer;
 }
 
-.modal__close:hover {}
+.modal_close:hover {}
 
 .modal__content {
     background-color: rgba(255, 255, 255, 1);
