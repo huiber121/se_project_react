@@ -1,0 +1,31 @@
+.cloths-section {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cloths-section__header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cloths-section__header_title{
+    margin: 0;
+}
+
+.cloths-section__header_button {
+    border: none;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.cloths-section__cloths_list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}

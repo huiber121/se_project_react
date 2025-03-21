@@ -20,7 +20,7 @@ The way you'll do this at work is by exporting images directly from Figma — we
 
 # WTWR
 
-Simple websit that add/exporle clothings.
+Simple websit that add/exporle/remove clothings.
 
 ## Description
 
@@ -28,8 +28,9 @@ This is a website to upload and filter clothing by specific weather type
 
 ## Technologies
 Porject Setup: Vite
-Programming language used: React.js , JS, HTML, CSS
+Programming language used: React.js , HTML, CSS
 Front End: RestAPI
+Mock API server
 Hosting Platform: Github
 
 ## Deployment
