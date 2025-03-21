@@ -93,7 +93,7 @@ function App() {
           <Routes>
             <Route
               // If setting a homepage route, look up base from the vite.config.js file, sometimes "/" is not the base
-              path="/se_project_react/"
+              path="/"
               element={
                 <Main
                   weatherData={weatherData}
@@ -102,7 +102,7 @@ function App() {
                 />
               }
             />
-            <Route path="/se_project_react/profile" element={<Profile onCardClick={handleCardClick} clothingItems={[...clothingItems]}/> } />
+            <Route path="/profile" element={<Profile onCardClick={handleCardClick} clothingItems={[...clothingItems]}/> } />
           </Routes>
           <Footer />
           {/* generates add item modal */}
