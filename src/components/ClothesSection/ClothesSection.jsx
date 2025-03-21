@@ -1,8 +1,8 @@
-import "./ClothsSection.css";
+import "./ClothesSection.css";
 import ItemCard from "../ItemCard/ItemCard";
 import { defaultClothingItems } from "../../utils/constants";
 
-export default function ClothsSection({onCardClick}) {
+export default function ClothesSection({onCardClick , clothingItems}) {
   return (
     <div className="cloths-section">
       <div className="cloths-section__header">
@@ -11,7 +11,7 @@ export default function ClothsSection({onCardClick}) {
       </div>
       <ul className="cloths-section__cloths_list">
         {/* filtering item by type */}
-        {defaultClothingItems.map((item) => {
+        {clothingItems.map((item) => {
           return (
             <ItemCard key={item._id} item={item} onCardClick={onCardClick} />
           );

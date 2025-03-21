@@ -1,15 +1,15 @@
 import "./Profile.css";
 import SideBar from "../SideBar/SideBar";
-import ClothsSection from "../ClothsSection/ClothsSection";
+import ClothesSection from "../ClothesSection/ClothesSection";
 
-export default function Profile({onCardClick}) {
+export default function Profile({onCardClick, clothingItems}) {
   return (
     <div className="profile">
       <section className="profile__sidebar">
         <SideBar />
       </section>
       <section className="profile__clothing-items">
-        <ClothsSection onCardClick={onCardClick}/>
+        <ClothesSection onCardClick={onCardClick} clothingItems={clothingItems}/>
       </section>
     </div>
   );

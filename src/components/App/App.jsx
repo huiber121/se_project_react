@@ -102,7 +102,7 @@ function App() {
                 />
               }
             />
-            <Route path="/se_project_react/profile" element={<Profile onCardClick={handleCardClick}/>} />
+            <Route path="/se_project_react/profile" element={<Profile onCardClick={handleCardClick} clothingItems={[...clothingItems]}/> } />
           </Routes>
           <Footer />
           {/* generates add item modal */}

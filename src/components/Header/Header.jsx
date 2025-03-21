@@ -4,7 +4,7 @@ import logo from "../../assets/Logo.svg";
 import avatar from "../../assets/user_avatar.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 
-function Header({ handleAddClick, weatherData }) {
+function Header({ handleAddClick, weatherData}) {
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
