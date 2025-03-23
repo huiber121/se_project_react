@@ -46,6 +46,7 @@
 }
 
 .modal__content_type_image {
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
     padding: 0;

@@ -44,13 +44,15 @@ function App() {
   };
 
   const handleDelete = () => {
-    deleteItem(selectedCard._id).then(() => {
-      setClothingItems(clothingItems.filter((item) => item._id !== selectedCard._id));
-      setSelectedCard({});
-      handleClose();
-    }
-    ).catch
-    (console.error);
+    deleteItem(selectedCard._id)
+      .then(() => {
+        setClothingItems(
+          clothingItems.filter((item) => item._id !== selectedCard._id)
+        );
+        setSelectedCard({});
+        handleClose();
+      })
+      .catch(console.error);
   };
 
   const handleClose = () => {
@@ -58,10 +60,12 @@ function App() {
   };
 
   const handleAddItemModalSubmit = (newItem) => {
-    addItem(newItem).then((data) => {
-      setClothingItems([data, ...clothingItems]);
-    }).catch(console.error);
-    handleClose();
+    addItem(newItem)
+      .then((data) => {
+        setClothingItems([data, ...clothingItems]);
+        handleClose();
+      })
+      .catch(console.error);
   };
 
   const handleToggleSwitchChange = () => {
@@ -102,7 +106,16 @@ function App() {
                 />
               }
             />
-            <Route path="/profile" element={<Profile onCardClick={handleCardClick} clothingItems={[...clothingItems]}/> } />
+            <Route
+              path="/profile"
+              element={
+                <Profile
+                  onCardClick={handleCardClick}
+                  clothingItems={[...clothingItems]}
+                  handleAddClick={handleAddClick}
+                />
+              }
+            />
           </Routes>
           <Footer />
           {/* generates add item modal */}
