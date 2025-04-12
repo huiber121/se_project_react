@@ -6,7 +6,6 @@ export default function DeleteModal({
   handleCloseModal,
   handleDelete,
 }) {
-  console.log(handleDelete);
   return (
     <div className={`modal ${isOpen && "modal__opened"}`}>
       <div className="modal__content modal__content_delete">
@@ -22,7 +21,11 @@ export default function DeleteModal({
           Are you sure you want to delete this item? This action is
           irreversible.
         </p>
-        <button type="button" className="modal__button modal__button_delete" onClick={handleDelete}>
+        <button
+          type="button"
+          className="modal__button modal__button_delete"
+          onClick={handleDelete}
+        >
           Yes, delete item
         </button>
         <button

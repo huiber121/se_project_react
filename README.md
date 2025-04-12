@@ -38,3 +38,7 @@ Hosting Platform: Github
 This website is deployed to the github
 [Github page Link](https://huiber121.github.io/se_project_react/)
 Video Intro: Not Yet Available
+
+## How to run
+Run the mock server: json-server --watch db.json --id _id --port 3001
+Run the app:  npm run dev
