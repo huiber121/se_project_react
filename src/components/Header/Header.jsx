@@ -1,14 +1,24 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
 import logo from "../../assets/Logo.svg";
-import avatar from "../../assets/user_avatar.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import ProtectedRoute from "../ProtectedRoute";
 
-function Header({ handleAddClick, weatherData}) {
+function Header({
+  handleAddClick,
+  weatherData,
+  handleRegisterModal,
+  handleLoginModal,
+  isLoggedIn,
+}) {
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
   });
+  const currentUser = useContext(CurrentUserContext);
+  const [imageError, setImageError] = useState(false);
   return (
     <header className="header">
       <Link to="/">
@@ -18,19 +28,38 @@ function Header({ handleAddClick, weatherData}) {
         {currentDate}, {weatherData.city}
       </p>
       <ToggleSwitch />
-      <button
-        onClick={handleAddClick}
-        type="button"
-        className="header__add-clothes-btn"
+      <ProtectedRoute
+        isLoggedIn={isLoggedIn}
+        handleRegisterModal={handleRegisterModal}
+        handleLoginModal={handleLoginModal}
       >
-        + Add clothes
-      </button>
-      <Link to="/profile" className="header__user">
-        <div className="header__user-container">
-          <p className="header__username">Terrence Tegegne</p>
-          <img src={avatar} alt="default user" className="header__avatar" />
-        </div>
-      </Link>
+        <button
+          onClick={handleAddClick}
+          type="button"
+          className="header__add-clothes-btn"
+        >
+          + Add clothes
+        </button>
+        <Link to="/profile" className="header__user">
+          <div className="header__user-container">
+            <p className="header__username">{currentUser.username}</p>
+            {currentUser.avatar && !imageError ? (
+              <img
+                src={currentUser.avatar}
+                alt="User Avatar"
+                className="header__avatar-img"
+                onError={() => setImageError(true)} // if image fails to load
+              />
+            ) : (
+              <div className="header__avatar-fallback">
+                {currentUser.username
+                  ? currentUser.username.charAt(0).toUpperCase()
+                  : "?"}
+              </div>
+            )}
+          </div>
+        </Link>
+      </ProtectedRoute>
     </header>
   );
 }

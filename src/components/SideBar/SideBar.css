@@ -1,10 +1,71 @@
 .sidebar {
-    display: flex;
-    gap: 16px;
-    width: 50.8%;
-    align-items: center;
+  display: flex;
+  gap: 24px;
+  width: 50.8%;
+  flex-direction: column;
+}
+
+.sidebar__header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-direction: row;
 }
 
 .sidebar__username {
-    margin: 0;
+  margin: 0;
+}
+
+.sidebar__avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar__avatar-fallback {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc; /* light gray */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.sidebar__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar__edit-profile-button {
+  border: none;
+  padding: 0;
+  margin-left: -59px;
+}
+
+.sidebar__edit-profile-button:hover {
+  cursor: pointer;
+}
+
+.sidebar__edit-profile-button:focus {
+  outline: none;
+}
+
+.sidebar__logout-button {
+  border: none;
+  padding: 0;
+  margin-left: -144px;
+}
+
+.sidebar__logout-button:hover {
+  cursor: pointer;
+}
+
+.sidebar__logout-button:focus {
+  outline: none;
 }

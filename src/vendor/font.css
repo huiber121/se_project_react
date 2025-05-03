@@ -20,5 +20,5 @@
   font-family: "Cabinet Grotesk";
   font-style: normal;
   font-weight: 700;
-  src: url("../vendor/font/CabinetGrotesk-Medium.otf") format("opentype"), url("../vendor/font/CabinetGrotesk-Medium.woff") format("woff");
+  src: url("../vendor/font/CabinetGrotesk-Bold.otf") format("opentype"), url("../vendor/font/CabinetGrotesk-Bold.woff") format("woff");
 }
