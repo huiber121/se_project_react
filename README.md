@@ -12,7 +12,7 @@ This project is made so all the elements are displayed correctly on popular scre
   
 **Figma**  
   
-* [Link to the project on Figma](https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=568-317&t=03yrZE9H34hmxdaj-0)
+* [Link to the project on Figma](https://www.figma.com/file/bfVOvqlLmoKZ5lpro8WWBe/Sprint-14_-WTWR?t=3hvVWRz9LUFsxyNn-6)
   
 **Images**  
   
@@ -40,5 +40,5 @@ This website is deployed to the github
 Video Intro: Not Yet Available
 
 ## How to run
-Run the mock server: json-server --watch db.json --id _id --port 3001
-Run the app:  npm run dev
+Clone the Back-end github: https://github.com/huiber121/se_project_express.git
+Run the app:  "npm run dev" at both terminal from front-end and back end.
