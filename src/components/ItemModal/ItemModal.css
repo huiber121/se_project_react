@@ -5,6 +5,8 @@
 
 .modal__image {
     border-radius: 20px 20px 0 0;
+    width: 498px;
+    height: 498px;
 }
 
 .modal__footer {

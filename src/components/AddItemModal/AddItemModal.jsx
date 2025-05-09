@@ -47,12 +47,12 @@ export default function AddItemModal({
       onSubmit={handleSubmit}
       isAddItemValid={isAddItemFormValid()}
     >
-      <label htmlFor="name" className="modal__label">
+      <label htmlFor="name-add-garment" className="modal__label">
         Name{""}
         <input
           type="text"
           className="modal__input"
-          id="name"
+          id="name-add-garment"
           placeholder="Name"
           required
           minLength="1"

@@ -26,6 +26,7 @@ import {
   removeCardLike,
 } from "../../utils/api";
 import { getToken, setToken, removeToken } from "../../utils/token";
+import ProtectedRoute from "../ProtectedRoute";
 
 function App() {
   const navigate = useNavigate();
@@ -142,6 +143,7 @@ function App() {
         setUserData({
           username: data.name,
           avatar: data.avatar,
+          id: data._id,
         });
         handleClose();
       })
@@ -251,14 +253,16 @@ function App() {
               <Route
                 path="/profile"
                 element={
-                  <Profile
-                    onCardClick={handleCardClick}
-                    clothingItems={[...clothingItems]}
-                    handleAddClick={handleAddClick}
-                    handleEditModal={handleEditModal}
-                    handleCardLike={handleCardLike}
-                    handleLogout={handleLogout}
-                  />
+                  <ProtectedRoute>
+                    <Profile
+                      onCardClick={handleCardClick}
+                      clothingItems={[...clothingItems]}
+                      handleAddClick={handleAddClick}
+                      handleEditModal={handleEditModal}
+                      handleCardLike={handleCardLike}
+                      handleLogout={handleLogout}
+                    />
+                  </ProtectedRoute>
                 }
               />
             </Routes>

@@ -33,7 +33,6 @@ export default function LoginModal({
   const handleSubmit = (e) => {
     e.preventDefault();
     handleLogin(data)
-    handleCloseModal();
   };
 
   const isLoginFormValid = () => {
@@ -51,13 +50,13 @@ export default function LoginModal({
       onSubmit={handleSubmit}
       isLoginValid={isLoginFormValid()}
     >
-      <label htmlFor="email" className="modal__label">
+      <label htmlFor="email-login" className="modal__label">
         Email
         <input
           type="email"
           className="modal__input"
-          id="email"
-          name="email"
+          id="email-login"
+          name="email-login"
           placeholder="Email"
           onChange={handleChange}
           value={data.email}

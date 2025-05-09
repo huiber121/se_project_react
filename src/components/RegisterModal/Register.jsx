@@ -31,7 +31,6 @@ export default function RegisterModal({
   const handleSubmit = (e) => {
     e.preventDefault();
     handleRegistration(data);
-    handleCloseModal();
   };
 
   const isRegisteredFormValid = () => {
@@ -54,12 +53,12 @@ export default function RegisterModal({
       swtchToLogin={swtchToLogin}
       isRegisteredValid={isRegisteredFormValid()}
     >
-      <label htmlFor="email" className="modal__label">
+      <label htmlFor="email-register" className="modal__label">
         Email{"*"}
         <input
           type="email"
           className="modal__input"
-          id="email"
+          id="email-register"
           name="email"
           placeholder="Email"
           value={data.email}
@@ -67,12 +66,12 @@ export default function RegisterModal({
           required
         />
       </label>
-      <label htmlFor="password" className="modal__label">
+      <label htmlFor="password-register" className="modal__label">
         Password{"*"}
         <input
           type="password"
           className="modal__input"
-          id="password"
+          id="password-register"
           name="password"
           placeholder="Password"
           value={data.password}
@@ -82,18 +81,18 @@ export default function RegisterModal({
           required
         />
       </label>
-      <label htmlFor="name" className="modal__label">
+      <label htmlFor="name-register" className="modal__label">
         Name{""}
         <input
           type="text"
           className="modal__input"
-          id="name"
+          id="name-register"
+          name="username"
           placeholder="Name"
           minLength="1"
           maxLength="30"
           onChange={handleChange}
           value={data.username}
-          name="username"
         />
       </label>
       <label htmlFor="avatarUrl" className="modal__label">

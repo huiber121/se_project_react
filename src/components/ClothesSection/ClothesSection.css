@@ -16,6 +16,7 @@
 }
 
 .cloths-section__header_button {
+    background-color: transparent;
     border: none;
     padding: 0;
     color: rgba(0, 0, 0, 0.6);

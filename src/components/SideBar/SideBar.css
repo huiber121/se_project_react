@@ -46,6 +46,7 @@
   border: none;
   padding: 0;
   margin-left: -59px;
+  background-color: transparent;
 }
 
 .sidebar__edit-profile-button:hover {
@@ -57,6 +58,7 @@
 }
 
 .sidebar__logout-button {
+  background-color: transparent;
   border: none;
   padding: 0;
   margin-left: -144px;

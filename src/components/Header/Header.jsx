@@ -28,38 +28,53 @@ function Header({
         {currentDate}, {weatherData.city}
       </p>
       <ToggleSwitch />
-      <ProtectedRoute
-        isLoggedIn={isLoggedIn}
-        handleRegisterModal={handleRegisterModal}
-        handleLoginModal={handleLoginModal}
-      >
-        <button
-          onClick={handleAddClick}
-          type="button"
-          className="header__add-clothes-btn"
-        >
-          + Add clothes
-        </button>
-        <Link to="/profile" className="header__user">
-          <div className="header__user-container">
-            <p className="header__username">{currentUser.username}</p>
-            {currentUser.avatar && !imageError ? (
-              <img
-                src={currentUser.avatar}
-                alt="User Avatar"
-                className="header__avatar-img"
-                onError={() => setImageError(true)} // if image fails to load
-              />
-            ) : (
-              <div className="header__avatar-fallback">
-                {currentUser.username
-                  ? currentUser.username.charAt(0).toUpperCase()
-                  : "?"}
-              </div>
-            )}
-          </div>
-        </Link>
-      </ProtectedRoute>
+      {isLoggedIn ? (
+        <>
+          <button
+            onClick={handleAddClick}
+            type="button"
+            className="header__add-clothes-btn"
+          >
+            + Add clothes
+          </button>
+          <Link to="/profile" className="header__user">
+            <div className="header__user-container">
+              <p className="header__username">{currentUser.username}</p>
+              {currentUser.avatar && !imageError ? (
+                <img
+                  src={currentUser.avatar}
+                  alt="User Avatar"
+                  className="header__avatar-img"
+                  onError={() => setImageError(true)}
+                />
+              ) : (
+                <div className="header__avatar-fallback">
+                  {currentUser.username
+                    ? currentUser.username.charAt(0).toUpperCase()
+                    : "?"}
+                </div>
+              )}
+            </div>
+          </Link>
+        </>
+      ) : (
+        <div>
+          <button
+            onClick={handleRegisterModal}
+            type="button"
+            className="header__register-btn"
+          >
+            Sign Up
+          </button>
+          <button
+            onClick={handleLoginModal}
+            type="button"
+            className="header__login-btn"
+          >
+            Log In
+          </button>
+        </div>
+      )}
     </header>
   );
 }

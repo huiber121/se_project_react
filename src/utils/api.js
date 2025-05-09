@@ -43,9 +43,7 @@ function getUserInfo(token) {
       // formatted value.
       Authorization: `Bearer ${token}`,
     },
-  }).then((res) => {
-    return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
-  });
+  }).then(checkResponse);
 };
 
 function updateUserInfo(data) {
