@@ -26,7 +26,7 @@ import {
   removeCardLike,
 } from "../../utils/api";
 import { getToken, setToken, removeToken } from "../../utils/token";
-import ProtectedRoute from "../ProtectedRoute";
+import ProtectedRoute from "../../utils/ProtectedRoute";
 
 function App() {
   const navigate = useNavigate();

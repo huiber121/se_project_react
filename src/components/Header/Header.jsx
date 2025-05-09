@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 import logo from "../../assets/Logo.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
-import ProtectedRoute from "../ProtectedRoute";
+import ProtectedRoute from "../../utils/ProtectedRoute";
 
 function Header({
   handleAddClick,
