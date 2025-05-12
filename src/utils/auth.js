@@ -1,15 +1,13 @@
+import { baseUrl } from "./constants";
 
 function checkResponse(res) {
   return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
 }
 
-// Specify the BASE_URL for the API.
-export const BASE_URL = "http://localhost:3001";
-
 // The register function accepts the necessary data as arguments,
 // and sends a POST request to the given endpoint.
 export const register = (email, password, name, avatar,) => {
-  return fetch(`${BASE_URL}/signup`, {
+  return fetch(`${baseUrl}/signup`, {
     method: "POST",
     headers: {  
       Accept: "application/json",
@@ -22,7 +20,7 @@ export const register = (email, password, name, avatar,) => {
 // The authorize function accepts the necessary data as parameters.
 export const authorize = (email, password) => {
   // A POST request is sent to /auth/local.
-  return fetch(`${BASE_URL}/signin`, {
+  return fetch(`${baseUrl}/signin`, {
     method: "POST",
     headers: {
       Accept: "application/json",

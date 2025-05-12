@@ -70,7 +70,7 @@ export const weatherDefaultConditions = [
     day: false,
     url: new URL("../assets/night/default.png", import.meta.url).href,
   },
-]
+];
 
 export const defaultClothingItems = [
   {
@@ -117,3 +117,8 @@ export const coordinates = {
 };
 
 export const APIkey = "653a219c4b42a5285fc1f237c73e52de";
+
+export const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://api.wtwrToday.jumpingcrab.com"
+    : "http://localhost:3001";
